@@ -1,0 +1,26 @@
+<HTML></HTML>
+    <head>
+        <title>¡Resultados de datos!</title>
+        <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <h1>Resultados</h1>
+        <h2>¡Gracias por compartir tus datos!, bien hecho!</h2>
+        <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" alt="Gif de celebración">
+        <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+        <p><strong>Edad:</strong> <span id="edad"></span></p>
+        <p><strong>Ciudad:</strong> <span id="ciudad"></span></p>
+        <p><strong>Pasatiempo favorito:</strong> <span id="pv"></span></p>
+
+
+        <script>
+    const valoresURL = new URLSearchParams(window.location.search);
+    document.getElementById('nombre').textContent = valoresURL.get('nombre');
+    document.getElementById('edad').textContent = valoresURL.get('edad');
+    document.getElementById('ciudad').textContent = valoresURL.get('ciudad');
+    document.getElementById('pv').textContent = valoresURL.get('pv');
+</script>
+    </body>
+</HTML>
